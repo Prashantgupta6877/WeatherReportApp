@@ -4,9 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import com.prashant.weatherreportapp.R
 import com.prashant.weatherreportapp.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -29,11 +30,15 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, {
-            textView.text = it
-        })
+        clickListeners()
+
         return root
+    }
+
+    private fun clickListeners() {
+        binding.fabAdd.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.homeToMap)
+        }
     }
 
     override fun onDestroyView() {
