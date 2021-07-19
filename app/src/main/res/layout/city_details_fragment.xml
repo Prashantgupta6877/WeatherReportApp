@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@color/white"
+    android:visibility="visible"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    tools:context=".ui.details.CityDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Tirupati" />
+
+        <View
+            android:id="@+id/vw1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="100dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/txtCity" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtMinTempTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/min"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/txtMaxTempTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vw1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtMinTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/txtMaxTemp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtMinTempTitle"
+            tools:text="Min" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtMaxTempTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtMinTempTitle"
+            app:layout_constraintTop_toBottomOf="@id/vw1"
+            android:text="@string/max" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtMaxTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtMinTemp"
+            app:layout_constraintTop_toBottomOf="@id/txtMaxTempTitle"
+            tools:text="Max" />
+
+        <View
+            android:id="@+id/vw2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="70dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/txtMinTemp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtHumidityTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/humidity"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/txtWindTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vw2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtHumidity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/txtHumidityTitle"
+            app:layout_constraintStart_toStartOf="@id/txtHumidityTitle"
+            app:layout_constraintTop_toBottomOf="@id/txtHumidityTitle"
+            tools:text="60" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtWindTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/wind"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtHumidityTitle"
+            app:layout_constraintTop_toBottomOf="@id/vw2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtWind"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/txtWindTitle"
+            app:layout_constraintStart_toStartOf="@id/txtWindTitle"
+            app:layout_constraintTop_toBottomOf="@id/txtWindTitle"
+            tools:text="60" />
+
+        <View
+            android:id="@+id/vw3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="70dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/txtHumidity" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtPressureTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/pressure"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/txtWindTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vw3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtPressure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/txtPressureTitle"
+            app:layout_constraintStart_toStartOf="@id/txtPressureTitle"
+            app:layout_constraintTop_toBottomOf="@id/txtPressureTitle"
+            tools:text="60" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtSeaTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/sea_level"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtHumidityTitle"
+            app:layout_constraintTop_toBottomOf="@id/vw3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtSea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/txtSeaTitle"
+            app:layout_constraintStart_toStartOf="@id/txtSeaTitle"
+            app:layout_constraintTop_toBottomOf="@id/txtSeaTitle"
+            tools:text="60" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="@dimen/progress_padding"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
