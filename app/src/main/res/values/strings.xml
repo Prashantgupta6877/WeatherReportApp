@@ -18,4 +18,9 @@
     <string name="fragment_city_details">City Weather Details</string>
     <string name="min">Min</string>
     <string name="max">Max</string>
+    <string name="metric_system">Metric System :-</string>
+    <string name="celsius">%1$.2f\u2103</string>
+    <string name="fahrenheit">%1$.2f\u2109</string>
+    <string name="km">%1$.2fkm/h</string>
+    <string name="miles">%1$.2fMiles/h</string>
 </resources>

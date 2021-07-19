@@ -29,6 +29,18 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Tirupati" />
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCity" />
+
         <View
             android:id="@+id/vw1"
             android:layout_width="match_parent"
@@ -37,7 +49,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="100dp"
             android:background="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/txtCity" />
+            app:layout_constraintTop_toBottomOf="@id/txtTemp" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txtMinTempTitle"
@@ -70,12 +82,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
+            android:text="@string/max"
             android:textSize="16sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtMinTempTitle"
-            app:layout_constraintTop_toBottomOf="@id/vw1"
-            android:text="@string/max" />
+            app:layout_constraintTop_toBottomOf="@id/vw1" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txtMaxTemp"

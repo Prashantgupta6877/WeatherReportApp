@@ -32,3 +32,11 @@ fun Boolean.visibleInvisible(): Int {
         View.GONE
     }
 }
+
+fun Double.celToFah(): Double {
+    return this * 9.0f / 5.0f + 32.0f
+}
+
+fun Double.kmToMiles(): Double {
+    return this / 1.6f
+}
